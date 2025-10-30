@@ -1,8 +1,9 @@
+
 pipeline {
   agent any
 
   environment {
-    APP_ID = "9xXf9kz_qwMyeEK-tHYeg" 
+    APP_ID = "jobportalserver-jobportalfrontend-wx2eby" 
   }
 
   parameters {
@@ -95,3 +96,6 @@ Jenkins
     }
   }
 }
+
+
+
