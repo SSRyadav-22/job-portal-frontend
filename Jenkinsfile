@@ -3,7 +3,7 @@ pipeline {
   agent any
 
   environment {
-    APP_ID = "jobportalserver-jobportalfrontend-wx2eby" 
+    APP_ID = "CO7Zr4Lb3HeOxmXlC17t6" 
   }
 
   parameters {
