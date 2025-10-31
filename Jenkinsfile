@@ -21,8 +21,12 @@ pipeline {
 
     stage('Setup .env') {
       steps {
-        sh "echo 'VITE_CANDIDATES_ENDPOINT=${params.VITE_CANDIDATES_ENDPOINT}' > .env"
-        sh 'echo ".env created with VITE_CANDIDATES_ENDPOINT"'
+        withCredentials([
+          string(credentialsId: params.VITE_CANDIDATES_ENDPOINT, variable: 'CANDIDATES_URL')
+        ]) {  
+          sh "echo 'VITE_CANDIDATES_ENDPOINT=${CANDIDATES_URL}' > .env"
+          sh 'echo ".env file created successfully with real URL"'
+        }
       }
     }
 
